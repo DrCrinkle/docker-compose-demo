@@ -1,0 +1,7 @@
+<form action="{{ url_for("hello") }}" method = "POST">
+    <p>Name: <input type = "text" name = "name" /></p>
+    <p>Email: <input type = "text" name = "email" /></p>
+    <p>Password: <input type = "text" name = "pass" /></p>
+    <p><input type = "submit" name = "action" value = "save to SQL" /></p>
+    <p><input type = "submit" name = "action" value = "save to Redis" /></p>
+</form>

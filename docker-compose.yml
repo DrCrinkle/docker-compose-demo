@@ -1,0 +1,28 @@
+version: '3'
+
+secrets:
+  postgres-passwd:
+    file: ./postgres/postgres-passwd
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+      - redis
+
+  redis:
+    image: redis:alpine
+    restart: always
+
+  postgres:
+    image: postgres:alpine
+    restart: always
+    volumes:
+      - "./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql"
+    secrets:
+      - postgres-passwd
+    environment:
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgres-passwd
