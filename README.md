@@ -1,6 +1,6 @@
 # docker-compose-demo
 
-This a docker compose demo, that consists of a web app that interacts with a PostgreSQL database and Redis database.
+This a docker compose demo that consists of a Flask web app that interacts with a PostgreSQL database and Redis database.
 
 # Instructions
 ```
