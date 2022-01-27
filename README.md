@@ -8,4 +8,4 @@ git clone https://github.com/DrCrinkle/docker-compose-demo.git
 cd docker-compose-demo
 docker compose up
 ```
-and then navigate to ```localhost:4000```
+and then navigate to ```localhost:5000```
